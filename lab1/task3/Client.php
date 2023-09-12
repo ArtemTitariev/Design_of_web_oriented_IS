@@ -125,7 +125,7 @@ class Client
 	}
 };
 
-$client1 = new Client;
+/*$client1 = new Client;
 $client1->set_name('Name1');
 $client1->address = 'some address';
 $client1->account_number = 33002;
@@ -138,7 +138,7 @@ $client2->account_number = 773002;
 $client3 = new Client;
 $client3->name = 'Name3';
 $client3->address = 'some address3';
-$client3->account_number = 3388024;
+$client3->account_number = 3388024;*/
 
 /*echo 'Client 1<br>';
 echo 'Name: ' . $client1->get_name() . '<br>';
@@ -158,7 +158,7 @@ echo '<br>';
 $client3->show_account_number();
 echo '<br>';*/
 
-
+/*
 //encapsulation demonstrating
 echo 'encapsulation demonstrating<br>';
 
@@ -179,3 +179,4 @@ $array = array($client1, $client2, $client3, $client4, $client5);
 //print array
 echo '<hr>show_objects method call<br>';
 Client::show_objects($array);
+*/
