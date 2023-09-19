@@ -28,7 +28,7 @@ echo 'Creating ColorPoint objects<br>';
 $point1 = new ColorPoint();
 $point2 = new ColorPoint(-1, -2, 'black');
 
-$point2->print();
+$point1->print();
 echo '<br>';
 $point2->print();
 echo '<br>';
