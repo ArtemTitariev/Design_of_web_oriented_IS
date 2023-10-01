@@ -9,7 +9,15 @@ abstract class Client
 	/** @var int */
 	private $accountNumber;
 
+	public function __construct($name, $address, $accountNumber)
+	{
+		$this->setName($name);
+		$this->setAddress($address);
+		$this->setAccountNumber($accountNumber);
+	}
+
 	abstract public function showInfo();
+
 
 	//set name 
 	public function setName($name)
@@ -46,7 +54,7 @@ abstract class Client
 		return $this->address;
 	}
 
-	public function showAddress()
+	public function showAddress(): void
 	{
 		echo 'Address: ' . $this->address;
 	}
@@ -65,12 +73,13 @@ abstract class Client
 		return $this->accountNumber;
 	}
 
-	public function showAccountNumber()
+	public function showAccountNumber(): void
 	{
 		echo 'Account number: ' . $this->accountNumber;
 	}
 
-	protected function show()
+
+	protected function show(): void
 	{
 		$this->showName();
 		echo '<br>';
