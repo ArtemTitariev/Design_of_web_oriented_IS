@@ -5,7 +5,7 @@ class LegalClient extends Client
 	/** @var string */
 	private $companyName;
 
-	public function __construct($name, $address, $accountNumber, $companyName)
+	public function __construct(string $name, string $address, int $accountNumber, string $companyName)
 	{
 		parent::__construct($name, $address, $accountNumber);
 		$this->setCompanyName($companyName);
@@ -35,6 +35,6 @@ class LegalClient extends Client
 
 	public function showCompanyName(): void
 	{
-		echo $this->companyName;
+		echo  'Company name: ' . $this->companyName;
 	}
 };

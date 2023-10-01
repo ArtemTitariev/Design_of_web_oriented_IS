@@ -3,13 +3,13 @@
 abstract class Client
 {
 	/** @var string */
-	private $name;
+	protected $name;
 	/** @var string */
-	private $address;
+	protected $address;
 	/** @var int */
-	private $accountNumber;
+	protected $accountNumber;
 
-	public function __construct($name, $address, $accountNumber)
+	public function __construct(string $name, string $address, int $accountNumber)
 	{
 		$this->setName($name);
 		$this->setAddress($address);
@@ -65,7 +65,7 @@ abstract class Client
 		if (!isset($accountNumber)) {
 			exit('Account number is empty');
 		}
-		$this->address = $accountNumber;
+		$this->accountNumber = $accountNumber;
 	}
 
 	public function getAccountNumber(): int
