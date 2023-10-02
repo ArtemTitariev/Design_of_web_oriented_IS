@@ -57,7 +57,7 @@ class Circle implements Figure
 
 	public function __toString()
 	{
-		return $this->center . ", radius = {$this->radius}";
+		return $this->center . ", radius = {$this->radius}, color: {$this->color}";
 	}
 
 

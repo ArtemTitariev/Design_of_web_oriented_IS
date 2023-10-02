@@ -57,7 +57,7 @@ class Triangle implements Figure
 
 	public function __toString()
 	{
-		return "{$this->v1}, {$this->v2}, {$this->v3}";
+		return "{$this->v1}, {$this->v2}, {$this->v3}, color: {$this->color}";
 	}
 
 

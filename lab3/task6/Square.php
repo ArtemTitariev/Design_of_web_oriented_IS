@@ -64,7 +64,7 @@ class Square implements Figure
 
 	public function __toString()
 	{
-		return "{$this->topLeft}, {$this->bottomRight}";
+		return "{$this->topLeft}, {$this->bottomRight}, color: {$this->color}";
 	}
 
 
