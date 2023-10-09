@@ -1,5 +1,7 @@
 <?php
 
+require_once 'Client.php';
+
 class LegalClient extends Client
 {
 	/** @var string */
@@ -12,7 +14,7 @@ class LegalClient extends Client
 	}
 
 	// redefinition of abstract method
-	public function showInfo()
+	public function showInfo(): void
 	{
 		$this->show();
 		$this->showCompanyName();
@@ -20,7 +22,7 @@ class LegalClient extends Client
 	}
 
 
-	public function setCompanyName($companyName)
+	public function setCompanyName($companyName): void
 	{
 		if (!isset($companyName)) {
 			exit('Company name is empty');
