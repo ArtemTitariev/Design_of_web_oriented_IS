@@ -12,9 +12,4 @@ trait ClientInfo
 		$this->address = $address;
 		$this->accountNumber = $accountNumber;
 	}
-
-	public function getInfo(): string
-	{
-		return "Individual client: {$this->name}, Address: {$this->address}, Account number: {$this->accountNumber}";
-	}
 }
