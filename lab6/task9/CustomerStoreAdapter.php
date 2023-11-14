@@ -11,14 +11,14 @@ class CustomerStoreAdapter implements ICustomerStore
 		$this->customerProfile = $customerProfile;
 	}
 
-	public function saveCustomerData(Client $client)
+	public function saveCustomerData()
 	{
 		// combine data before saving
 		$combinedData = $this->combineData();
 
 		// saving customer data, for example, in the store database
-		echo "Saving customer data in the store database: 
-		{$combinedData} <br/>";
+		echo "Saving customer data in the store database: <br/><br/>
+		{$combinedData}<br/>";
 	}
 
 	public function getCustomerData($clientId): Client
@@ -35,7 +35,7 @@ class CustomerStoreAdapter implements ICustomerStore
 			$this->customerProfile->getPurchaseHistory()
 		);
 
-		return "Client data: {$clientData}, 
+		return "Client data: {$clientData}, <br/>
 			purchase history: {$purchaseHistory}";
 	}
 }
