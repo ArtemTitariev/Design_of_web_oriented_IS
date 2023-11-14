@@ -16,6 +16,15 @@ class Client
 		$this->accessionDate = new DateTime();
 	}
 
+
+	public function __clone()
+	{
+		$this->accessionDate = new DateTime();
+
+		// all other attributes do not need to be copied 
+		// manually as they are simple
+	}
+
 	// returns accession date
 	public function getAccessionDate()
 	{
