@@ -4,13 +4,12 @@ require_once './Client.php';
 require_once './ICustomerStore.php';
 require_once './CustomerStoreAdapter.php';
 
-// $client1 = new Client('Name1', 'Some address1');
-// $order = new Order("12345", 100.00, $client1);
+$client1 = new Client('Name1', 'Some address1');
 
-// // create adapter
-// $storeAdapter = new CustomerStoreAdapter();
+$customerProfile = new CustomerProfile(1);
+$customerProfile->addPurchase("Product A", 2);
+$customerProfile->addPurchase("Product B", 1);
 
-// // save customer data
-// $storeAdapter->saveCustomerData($client1);
+// create adapter
 
-// $storeAdapter->getCustomerData('215');
+// save customer data
