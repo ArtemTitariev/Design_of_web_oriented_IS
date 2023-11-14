@@ -8,11 +8,12 @@ class Client
 	private $accessionDate;
 
 
-	public function __construct($name, $address, $accountNumber)
+	public function __construct($name, $address)
 	{
 		$this->name = $name;
 		$this->address = $address;
-		$this->accountNumber = $accountNumber;
+		//generate random string
+		$this->accountNumber = $this->generateAccountNumber(5);
 		$this->accessionDate = new DateTime();
 	}
 
@@ -21,8 +22,21 @@ class Client
 	{
 		$this->accessionDate = new DateTime();
 
+		//account number must be unique
+		$this->accountNumber = $this->generateAccountNumber(5);
+
 		// all other attributes do not need to be copied 
 		// manually as they are simple
+	}
+
+	private function generateAccountNumber($len = 5)
+	{
+		return bin2hex(random_bytes($len));
+	}
+
+	public function getInfo(): string
+	{
+		return "Client: {$this->name}, Address: {$this->address}, Account number: {$this->accountNumber}, Accession date : {$this->accessionDate->format('Y-m-d H:i:s')}";
 	}
 
 	// returns accession date
@@ -71,16 +85,7 @@ class Client
 		echo 'Address: ' . $this->address;
 	}
 
-
-	public function setAccountNumber($accountNumber)
-	{
-		if (!isset($accountNumber)) {
-			exit('Account number is empty');
-		}
-		$this->address = $accountNumber;
-	}
-
-	public function getAccountNumber(): int
+	public function getAccountNumber()
 	{
 		return $this->accountNumber;
 	}
@@ -88,21 +93,5 @@ class Client
 	public function showAccountNumber()
 	{
 		echo 'Account number: ' . $this->accountNumber;
-	}
-
-	//The method searches for the field specified in the $field variable 
-	//and checks the value of $value for equality 
-	public function search($field, $value): bool
-	{
-		switch ($field) {
-			case 'name':
-				return $this->name === $value;
-			case 'address':
-				return $this->address === $value;
-			case 'accountNumber':
-				return $this->accountNumber === $value;
-			default:
-				return false; //search field not found
-		}
 	}
 };
