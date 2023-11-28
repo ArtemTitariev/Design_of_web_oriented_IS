@@ -14,7 +14,9 @@ class EntryForm extends Model
 	{
 		return [
 			[['name', 'email'], 'required'],
-			['email', 'email'],
+			[['name'], 'string', 'min' => 2, 'max' => 50],
+			[['email'], 'email'],
+			[['email'], 'string', 'max' => 100],
 		];
 	}
 }

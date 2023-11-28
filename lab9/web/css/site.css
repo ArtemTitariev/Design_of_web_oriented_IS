@@ -64,6 +64,22 @@ a.desc:after {
     color: rgba(255, 255, 255, 0.5);
 }
 
+/* Колір тексту для невірного введення */
+.has-error .help-block {
+    color: #a94442;
+}
+
+/* Фон для невірного введення */
+.has-error .form-control {
+    border-color: #a94442;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+/* Лінія для невірного введення у Bootstrap 3 */
+.has-error .form-control-feedback {
+    color: #a94442;
+}
+
 @media(max-width:767px) {
     .nav li > form > button.logout {
         display:block;
