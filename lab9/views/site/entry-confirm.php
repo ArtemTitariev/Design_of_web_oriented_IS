@@ -2,9 +2,18 @@
 
 use yii\helpers\Html;
 ?>
-<p>Ви вказали наступну інформацію:</p>
 
-<ul>
-	<li><label>Ім’я</label>: <?= Html::encode($model->name) ?></li>
-	<li><label>Адреса електронної пошти</label>: <?= Html::encode($model->email) ?></li>
-</ul>
+<h5>Ви вказали наступну інформацію:</h5>
+
+<div class="card bg-light mb-3" style="max-width: 500px;">
+	<div class="card-body">
+		<h5 class="card-title">Ім’я</h5>
+		<p class="card-text"><?= Html::encode($model->name) ?></p>
+	</div>
+</div>
+<div class="card bg-light mb-3" style="max-width: 500px;">
+	<div class="card-body">
+		<h5 class="card-title">Адреса електронної пошти</h5>
+		<p class="card-text"><?= Html::encode($model->email) ?></p>
+	</div>
+</div>
