@@ -3,6 +3,9 @@
 /** @var yii\web\View $this */
 /** @var string $content */
 
+// Підключення CSS файлу для пагінації
+$this->registerCssFile('@web/css/pagination-styles.css');
+
 use app\assets\AppAsset;
 use app\widgets\Alert;
 use yii\bootstrap5\Breadcrumbs;
